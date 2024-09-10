@@ -173,8 +173,41 @@ function sum (a,...rest){
     return a;
 }
 
-console.log(sum(1,2,3,4));
-console.log(sum(1,2,3,4,5,6,7,8,9));
+// console.log(sum(1,2,3,4));
+// console.log(sum(1,2,3,4,5,6,7,8,9));
+
+// spread (...): phân rã
+
+var arr =[1,2]
+var arr2 =[3,4]
+
+var newArr1 = [...arr,...arr2];
+
+// console.log(newArr1);
+var obj1 = {
+    name: "chinhpd5"
+}
+
+var obj2 = {
+    name: "chinhpd6",
+    age: 20
+}
+
+var newObj = {...obj2,...obj1}
+
+// console.log(newObj);
+
+var newObj3 = {...obj2} //obj2
+
+obj2.name='long'
+
+console.log(obj2);
+console.log(newObj3);
+
+
+
+
+
 
 
 
