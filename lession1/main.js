@@ -146,10 +146,39 @@ var obj ={
 
 var {name,age: parentAge,gender,child: {name : childName}} = obj
 
-console.log(name);
-console.log(parentAge);
-console.log(gender);
-console.log(childName);
+// console.log(name);
+// console.log(parentAge);
+// console.log(gender);
+// console.log(childName);
+
+//rest(...): phần còn lại
+
+var arr = [1,2,3,4,5];
+
+var [a,...rest] = arr
+
+// console.log(a);
+// console.log(rest);
+var {name,...restObj}= obj;
+
+// console.log(name);
+// console.log(restObj);
+
+function sum (a,...rest){
+    // console.log(rest);
+    // let total =0;
+    rest.forEach((item)=>{
+        a += item;
+    })
+    return a;
+}
+
+console.log(sum(1,2,3,4));
+console.log(sum(1,2,3,4,5,6,7,8,9));
+
+
+
+
 
 
 
