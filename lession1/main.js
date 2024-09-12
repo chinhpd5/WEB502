@@ -201,8 +201,108 @@ var newObj3 = {...obj2} //obj2
 
 obj2.name='long'
 
-console.log(obj2);
-console.log(newObj3);
+// console.log(obj2);
+// console.log(newObj3);
+
+
+// Nullish (??)
+
+var x ; // undefinded , null
+
+// x = x ?? 'deflaut value';
+x ??= 'deflaut value'
+
+// console.log(x);
+
+// optional chaining (?.)
+
+var obj = {
+    name: "chinhpd5",
+    // child:{name: "chinhpd6"}
+}
+// console.log(obj.child);
+
+// console.log(obj?.child?.name);
+
+// Xử lý bất đồng bộ trong JS
+
+// setTimeout, setInterval, call api (fecth axios,...), click submit,
+
+// console.log(1); // 1 // đồng bộ
+
+// setTimeout(()=>{ // bất đồng bộ
+//     console.log(2); // chờ 2s -> 2
+// },2000)
+
+// console.log(3); // 3 // đồng bộ
+
+//1
+//3
+// sau 2s -> 2
+
+// 1
+// chờ 2s -> 2
+// 3
+
+// callback
+// promise
+// async/await
+
+// callback
+
+var sayHello =(name) =>{
+    console.log(`Xin chào ${name}`);
+}
+
+var doing = (callback)=>{
+    callback("chinhpd5")
+}
+
+// doing(sayHello);
+
+//fake 1 tác vụ bất đồng bộ
+var delay = (callback,ms)=>{
+
+    setTimeout(()=>{
+        let data ='Dữ liệu';
+        callback(data)
+    },ms)
+
+}
+
+
+var doing = ()=>{
+    console.log("Bắt đầu");
+    
+    delay((data)=>{
+        console.log(data);
+        console.log("Kết thúc");
+
+        console.log("Bắt đầu2");
+        delay((data)=>{
+            console.log(data);
+            console.log("Kết thúc2");
+
+            console.log("Bắt đầu 3");
+            delay((data)=>{
+                console.log(data);
+                console.log("Kết thúc 3");
+                
+            },2000)
+            
+        },2000)
+
+    },1500)
+
+}
+
+doing(); 
+// callback hell
+
+
+
+
+
 
 
 
