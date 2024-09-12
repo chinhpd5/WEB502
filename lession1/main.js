@@ -365,8 +365,23 @@ var doing= ()=>{
 
 }
 
-doing();
+// doing();
 
+
+//async/await
+var doing = async ()=>{
+    console.log("Bắt đầu");
+    var data = await delay(1000);
+    console.log(data);
+    console.log("Kết thúc");
+
+    console.log("Bắt đầu 2");
+    var data2 = await delay(1000);
+    console.log(data2);
+    console.log("Kết thúc 2");
+}
+
+doing();
 
 
 
