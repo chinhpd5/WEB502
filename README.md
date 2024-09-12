@@ -11,7 +11,7 @@
 - Nếu lỗi: Mở Window PowerShell bằng adminitrator(quyền quản trị viên) ->
   ```
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-  ``
+  ```
 - Tạo file **tsconfig.json** và thêm nội dung:
 ```
 {
