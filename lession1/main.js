@@ -262,27 +262,26 @@ var doing = (callback)=>{
 
 //fake 1 tác vụ bất đồng bộ
 var delay = (callback,ms)=>{
-
     setTimeout(()=>{
         let data ='Dữ liệu';
         callback(data)
     },ms)
-
 }
 
-
 var doing = ()=>{
+    //việc 1
     console.log("Bắt đầu");
-    
     delay((data)=>{
         console.log(data);
         console.log("Kết thúc");
 
+        //việc 2
         console.log("Bắt đầu2");
         delay((data)=>{
             console.log(data);
             console.log("Kết thúc2");
 
+            // việc 3
             console.log("Bắt đầu 3");
             delay((data)=>{
                 console.log(data);
@@ -296,10 +295,77 @@ var doing = ()=>{
 
 }
 
-doing(); 
+// doing(); 
 // callback hell
 
+// promise 
 
+var myPromise = new Promise((reslove, reject)=>{
+    const isCheck = true;
+    if(isCheck){
+        reslove("Thành công")
+    }else{
+        reject("Thất bại")
+    }
+})
+
+// myPromise
+//     .then((data)=>{
+//         console.log(data);
+//         return myPromise;
+//     })
+//     .then(data2=>{
+//         console.log(data2);
+//         return myPromise;
+//     })
+//     .then((data)=>{
+//         console.log(data);
+//     })
+//     .catch(err=>{
+//         console.log(err);
+//     })
+//     .finally(()=>{
+//         console.log("Kết thúc");
+//     })
+
+var delay = (ms)=>{
+
+    return new Promise((reslove, reject)=>{
+
+        setTimeout(()=>{
+            reslove("Thực thi")
+        },ms)
+
+    })
+}
+
+var doing= ()=>{
+    delay(2000)
+        .then((data)=>{
+            console.log("Bắt đầu 1");
+            console.log(data);
+            console.log("Kết thúc 1");
+            return  delay(1500);
+        })
+        .then((data)=>{
+            console.log("Bắt đầu 2");
+            console.log(data);
+            console.log("Kết thúc 2");
+            return  delay(1000);
+        })
+        .then((data)=>{
+            console.log("Bắt đầu 3");
+            console.log(data);
+            console.log("Kết thúc 3");
+            // return  delay(2000);
+        })
+        .catch(()=>{
+            console.log("lỗi");
+        })
+
+}
+
+doing();
 
 
 
