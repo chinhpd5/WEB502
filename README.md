@@ -9,7 +9,9 @@
 - Tạo file **index.ts**
 - Khởi chạy chương trình: Mở Terminal -> `tsc index.ts --watch`
 - Nếu lỗi: Mở Window PowerShell bằng adminitrator(quyền quản trị viên) ->
-  ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned``
+  ```
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+  ``
 - Tạo file **tsconfig.json** và thêm nội dung:
 ```
 {
