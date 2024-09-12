@@ -164,14 +164,14 @@ var {name,...restObj}= obj;
 // console.log(name);
 // console.log(restObj);
 
-function sum (a,...rest){
-    // console.log(rest);
-    // let total =0;
-    rest.forEach((item)=>{
-        a += item;
-    })
-    return a;
-}
+// function sum (a,...rest){
+//     // console.log(rest);
+//     // let total =0;
+//     rest.forEach((item)=>{
+//         a += item;
+//     })
+//     return a;
+// }
 
 // console.log(sum(1,2,3,4));
 // console.log(sum(1,2,3,4,5,6,7,8,9));
@@ -370,6 +370,7 @@ var doing= ()=>{
 
 //async/await
 var doing = async ()=>{
+
     console.log("Bắt đầu");
     var data = await delay(1000);
     console.log(data);
@@ -381,7 +382,18 @@ var doing = async ()=>{
     console.log("Kết thúc 2");
 }
 
-doing();
+// doing();
+
+// module
+import title, {address,age,sayHello5} from './service.js'
+
+console.log(title);
+
+console.log(address);
+console.log(age);
+sayHello5();
+
+
 
 
 
