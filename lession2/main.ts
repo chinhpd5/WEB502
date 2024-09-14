@@ -33,7 +33,27 @@ function sum(a: number, b: number): void{
     console.log(a+b);
 }
 
-sum(1,2)
+// sum(1,2)
+
+//array
+
+let myArray: number[] = [1,2,3,4,-5,6.5];
+let myLove : string[] = ["Long", "Bình", 'true', '40'];
+
+// console.log(myArray);
+
+//object
+
+let myObject : {
+    name : string,
+    age : number,
+    gender? : boolean // ? có thể có hoặc không
+} = {
+    name: "chinhpd5",
+    age: 20,
+    // gender: true
+}
+
 
 
 

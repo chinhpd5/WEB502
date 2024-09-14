@@ -21,4 +21,14 @@ function myFunction(name) {
 function sum(a, b) {
     console.log(a + b);
 }
-sum(1, 2);
+// sum(1,2)
+//array
+var myArray = [1, 2, 3, 4, -5, 6.5];
+var myLove = ["Long", "Bình", 'true', '40'];
+// console.log(myArray);
+//object
+var myObject = {
+    name: "chinhpd5",
+    age: 20,
+    // gender: true
+};
