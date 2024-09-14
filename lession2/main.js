@@ -70,3 +70,25 @@ var info = {
     gender: false,
     job: eJob.IT
 };
+// any và unknow
+var abc;
+abc = "chinh";
+abc.toUpperCase();
+abc = 20;
+abc = true;
+abc = [1, 2, 3];
+var xyz;
+xyz = "chinh";
+// xyz= 20;
+// xyz = true;
+if (typeof xyz == 'string') {
+    xyz.toUpperCase();
+}
+var myData1 = {
+    data: { id: 1, name: "chinhpd5" },
+    status: true
+};
+var myData2 = {
+    data: { title: "1", gender: true },
+    status: false
+};

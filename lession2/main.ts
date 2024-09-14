@@ -122,6 +122,50 @@ let info :IEmployee={
     job: eJob.IT
 }
 
+// any và unknow
+
+let abc : any;
+abc = "chinh";
+abc.toUpperCase();
+abc= 20;
+abc = true;
+abc =[1,2,3]
+
+let xyz : unknown;
+xyz = "chinh";
+// xyz= 20;
+// xyz = true;
+
+if(typeof xyz == 'string'){
+    xyz.toUpperCase();
+}
+
+// generic
+
+// type Data1 ={
+//     data: {id: number, name: string},
+//     status: boolean
+// }
+
+// type Data2 ={
+//     data: {title: string, gender: boolean},
+//     status: boolean
+// }
+
+type Data<myType>={
+    data: myType,
+    status: boolean
+}
+
+let myData1 : Data<{id: number, name : string}>={
+    data: {id: 1, name: "chinhpd5"},
+    status: true
+}
+
+let myData2 : Data<{title: string, gender: boolean}>={
+    data: {title: "1", gender: true},
+    status: false
+}
 
 
 
