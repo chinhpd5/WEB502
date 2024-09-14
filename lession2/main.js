@@ -43,3 +43,18 @@ newArr = ["chinh", "long", "cường"];
 // newArr = [1, "chính"]
 var newArr2;
 newArr2 = [1, "chính", 4.5, 'Bắc'];
+// enum
+var myEnum;
+(function (myEnum) {
+    myEnum["a"] = "Ch\u00EDnh";
+    myEnum["b"] = "Nam";
+    myEnum["c"] = "Hoa";
+})(myEnum || (myEnum = {}));
+// console.log(myEnum.b);
+var myKey = myEnum.b;
+var myInfo;
+var chinhInfo = {
+    name: "Chính",
+    age: 20,
+    gender: true
+};

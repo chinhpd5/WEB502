@@ -68,7 +68,35 @@ newArr = ["chinh", "long", "cường"]
 // newArr = [1, "chính"]
 
 let newArr2 : (number | string)[];
-newArr2 = [1, "chính", 4.5, 'Bắc']
+newArr2 = [1, "chính", 4.5, 'Bắc'];
+
+// enum
+enum myEnum {
+    "a"= "Chính",
+    "b" = "Nam",
+    "c" = "Hoa"
+}
+
+// console.log(myEnum.b);
+let myKey: myEnum= myEnum.b;
+// console.log(myKey);
+
+// type
+type myType ={
+    name: string,
+    age: number,
+    gender: boolean
+}
+
+let myInfo: myType;
+let chinhInfo: myType= {
+    name: "Chính",
+    age: 20,
+    gender: true
+}
+
+
+
 
 
 
