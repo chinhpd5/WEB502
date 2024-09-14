@@ -1,13 +1,22 @@
-// main.ts(ts)-> tsc -> main.js(js) -> link -> index.html(live server)
-
+// tsc main.ts --watch
+/**
+ * string
+ * number
+ * boolean
+ */
 
 let myName : string = "chinhpd5";
-// myName = '50';
+myName = "Phí Đức Chính";
+
 console.log(myName);
 
-let age : number = 20;
-let gender : boolean = true;
+let myAge : number = 20
+console.log(myAge);
 
-console.log(age);
+let gender : boolean = true;
 console.log(gender);
+
+let myAdrress = "Hà Nội";
+// myAdrress = 20
+
 
