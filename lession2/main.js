@@ -58,3 +58,15 @@ var chinhInfo = {
     age: 20,
     gender: true
 };
+// interface
+var eJob;
+(function (eJob) {
+    eJob["IT"] = "C\u00F4ng ngh\u1EC7 th\u00F4ng tin";
+    eJob["FREE"] = "T\u1EF1 do";
+})(eJob || (eJob = {}));
+var info = {
+    name: "chinhpd5",
+    age: 20,
+    gender: false,
+    job: eJob.IT
+};

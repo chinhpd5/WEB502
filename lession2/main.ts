@@ -95,6 +95,33 @@ let chinhInfo: myType= {
     gender: true
 }
 
+// interface
+
+enum eJob {
+    "IT"="Công nghệ thông tin",
+    "FREE"= "Tự do" 
+}
+
+interface IPerson {
+    name: string;
+    age: number,
+    gender: boolean
+}
+interface IRelationship {
+    relationship?: boolean
+}
+
+interface IEmployee extends IPerson,IRelationship{
+    job: eJob
+}
+
+let info :IEmployee={
+    name: "chinhpd5",
+    age: 20,
+    gender: false,
+    job: eJob.IT
+}
+
 
 
 
