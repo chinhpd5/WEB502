@@ -55,5 +55,20 @@ let myObject : {
 }
 
 
+//union |
+
+let a : string | number;
+a = "chinhpd5"
+a = 20
+// a = true
+
+let newArr : number[] | string[];
+newArr = [1,2,3,4,5];
+newArr = ["chinh", "long", "cường"]
+// newArr = [1, "chính"]
+
+let newArr2 : (number | string)[];
+newArr2 = [1, "chính", 4.5, 'Bắc']
+
 
 

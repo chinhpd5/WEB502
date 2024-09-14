@@ -32,3 +32,14 @@ var myObject = {
     age: 20,
     // gender: true
 };
+//union |
+var a;
+a = "chinhpd5";
+a = 20;
+// a = true
+var newArr;
+newArr = [1, 2, 3, 4, 5];
+newArr = ["chinh", "long", "cường"];
+// newArr = [1, "chính"]
+var newArr2;
+newArr2 = [1, "chính", 4.5, 'Bắc'];
