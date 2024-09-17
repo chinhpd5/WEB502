@@ -1,13 +1,21 @@
+type PropsType ={
+    name: string;
+    description: string;
+    image: string;
+    price: number;
+    sale: boolean
+}
 
-
-function ProductItem(){
-
+function ProductItem(props: PropsType){
+    console.log(props);
+    
     return (
         <>
-            <h1>Sản phẩm: ai Nghe Không Dây TWS 5.3 Kết Nối Bluetooth</h1>
-            <p>Chống Thấm Nước Có Micro Âm Thanh Nổi Tiện Dụng</p>
-            <img style={{width: '300px'}} src="https://down-vn.img.susercontent.com/file/cn-11134301-7r98o-lpsw5nzzch8580.webp" alt="" />
-            <h3>53.000 vnđ</h3>
+            <h1 className="heading">{props.name}</h1>
+            <p>{props.description}</p>
+            <img style={{width: '300px'}} src={props.image} alt="" />
+            <h3>{props.price} vnđ</h3>
+            <h4>{ props.sale ? "Đang sale" : "Không sale" }</h4>
         </>
     )
 }
