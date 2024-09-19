@@ -1,4 +1,5 @@
 import './App.css'
+import ListProduct from './components/ListProduct'
 import ProductItem from './components/ProductItem'
 import Product from './interface/product'
 
@@ -34,7 +35,7 @@ function App() {
     <>
 
       <ListProduct listProduct={listProduct} />
-      <ProductItem 
+      {/* <ProductItem 
         name='Tai Nghe Không Dây TWS 5.3' 
         description='Kết Nối Bluetooth Chống Thấm Nước Có Micro Âm Thanh Nổi Tiện Dụng'
         image='https://down-vn.img.susercontent.com/file/cn-11134301-7r98o-lpsw5nzzch8580.webp'
@@ -48,7 +49,7 @@ function App() {
         image='https://down-vn.img.susercontent.com/file/ec99d6bd4d34025b8613c81fa815c573.webp'
         price={150000}
         sale={false}
-      />
+      /> */}
     </>
   )
 }
