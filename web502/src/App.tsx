@@ -31,7 +31,7 @@ function App() {
       sale:true
     }
   ]
-
+  //ví dụ 1
   const [count,setCount] = useState<number>(0);
 
   const handleAdd = ()=>{
@@ -47,13 +47,33 @@ function App() {
       return prev-1;
     })
   }
+  const handleReset = ()=>{
+    // reset count về 0
+    setCount(0)
+  }
 
+  //ví dụ 2
+  const [text,setText] = useState<string>('chinhpd5')
+  // console.log(text);
+  
   return (
     <>
+      {/* ví dụ 2: two way binding */}
+
+      <input 
+        type="text"
+        value={text}
+        onChange={(e)=>{
+          // console.log(e.target.value);
+          setText(e.target.value)
+        }}  
+        />
+
+      {/* ví dụ 1 */}
       <h1>Count: {count}</h1>
       <button onClick={handleAdd}>Tăng</button>
       <button onClick={handleRemove}>Giảm</button>
-      <button>Reset</button>
+      <button onClick={handleReset}>Reset</button>
       
     </>
   )
