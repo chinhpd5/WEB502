@@ -1,13 +1,8 @@
-type PropsType ={
-    name: string;
-    description: string;
-    image: string;
-    price: number;
-    sale: boolean
-}
+import Product from "../interface/product";
 
-function ProductItem(props: PropsType){
-    console.log(props);
+
+function ProductItem(props: Product){
+    // console.log(props);
     
     return (
         <>
