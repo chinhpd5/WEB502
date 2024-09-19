@@ -53,9 +53,22 @@ function App() {
   }
 
   //ví dụ 2
-  const [text,setText] = useState<string>('chinhpd5')
+  //quản giá trị trong ô input
+  const [text,setText] = useState<string>('');
+  // quản lý danh sách công việc
+  const [list,setList] = useState<string[]>(["Ăn","Ngủ"]);
+  const handleAddJob = ()=>{
+    // thêm text của ô input vào list
+    // setList
+    setList((prev)=>{
+      //spread
+      return [...prev,text] // gán vào list
+    })
+    //reset nội dung trong ô input
+    setText('')
+
+  }
   // console.log(text);
-  
   return (
     <>
       {/* ví dụ 2: two way binding */}
@@ -67,7 +80,17 @@ function App() {
           // console.log(e.target.value);
           setText(e.target.value)
         }}  
-        />
+      />
+      <button onClick={handleAddJob}>Add</button>
+      <ul>
+        {
+          list?.map((item,index)=>{
+            return (
+              <li key={index}>{item}</li>
+            )
+          })
+        }
+      </ul>
 
       {/* ví dụ 1 */}
       <h1>Count: {count}</h1>
