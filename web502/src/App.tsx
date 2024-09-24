@@ -20,7 +20,7 @@ function App() {
      * useEffect(()=>{},[]): gọi callback duy nhất lần đầu tiên
      * useEffect(()=>{},[deps]): gọi callback mỗi khi deps thay đổi
      */
-  console.log(type);
+  // console.log(type);
   
   useEffect(()=>{
     //call api
