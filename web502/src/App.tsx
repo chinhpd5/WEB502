@@ -33,6 +33,12 @@ function App() {
       <h1 className='text-danger'>Xin chào</h1>
       {/* <ListProduct/> */}
       {/* 
+        npm i bootstrap
+        thêm 
+        `
+          import 'bootstrap/dist/css/bootstrap.min.css'
+          import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+        ` vào file main.tsx
         Hiển danh sách sản phẩm (products) bằng bootstrap
       */}
     </>
