@@ -68,6 +68,20 @@ function App() {
     setText('')
 
   }
+  
+  const handleDelete = (indexDelete:number)=>{
+    // console.log(indexDelete);
+    setList((prev:string[])=>{
+      // const newPrev = prev.filter((item,index)=>{
+      //   return index  != indexDelete
+      // })
+      
+      // const newPrev = prev.filter((item,index)=> index != indexDelete)
+      // console.log(newPrev);
+
+      return prev.filter((item,index)=> index != indexDelete);
+    })
+  }
   // console.log(text);
   return (
     <>
@@ -86,7 +100,10 @@ function App() {
         {
           list?.map((item,index)=>{
             return (
-              <li key={index}>{item}</li>
+              <li key={index}>
+                <span>{item}</span>
+                <button onClick={()=>{handleDelete(index)}} style={{marginLeft: '10px'}}>Xóa</button>
+              </li>
             )
           })
         }
