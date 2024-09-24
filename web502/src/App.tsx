@@ -1,7 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import ListProduct from './components/ListProduct'
-import ProductItem from './components/ProductItem'
 import Product from './interface/product'
 
 /**
@@ -13,24 +11,30 @@ import Product from './interface/product'
 
 
 function App() {
+  const [data,setData] = 
+    useState
+      <{id:number, body:string,title:string, userId:number}[]>
+    ([])
 
-  const listProduct: Product[]=[
-    {
-      name:'Tai Nghe Không Dây TWS 5.3', 
-      description:'Kết Nối Bluetooth Chống Thấm Nước Có Micro Âm Thanh Nổi Tiện Dụng',
-      image:'https://down-vn.img.susercontent.com/file/cn-11134301-7r98o-lpsw5nzzch8580.webp',
-      price:100000,
-      sale:true
+    /**
+     * useEffect(()=>{}): gọi lại mỗi khi component render
+     * useEffect(()=>{},[]): gọi duy nhất lần đầu tiên
+     */
 
-    },
-    {
-      name:'Chuột game có dây Logitech G102 ', 
-      description:'Kết Nối Bluetooth Chống Thấm Nước Có Micro Âm Thanh Nổi Tiện Dụng',
-      image:'https://down-vn.img.susercontent.com/file/cn-11134301-7r98o-lpsw5nzzch8580.webp',
-      price:150000,
-      sale:true
-    }
-  ]
+  useEffect(()=>{
+    //call api
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response)=>{
+        // console.log(response);
+        return response.json()
+      })
+      .then((dataRes)=>{
+        // console.log(dataRes);
+        setData(dataRes)
+      })
+  },[])
+  
+  //useState
   //ví dụ 1
   const [count,setCount] = useState<number>(0);
 
@@ -85,6 +89,15 @@ function App() {
   // console.log(text);
   return (
     <>
+      {/* ví dụ 3:  */}
+      <ul>
+        {data?.map((item,index)=>{
+          return(
+            <li key={item.id}>{item.title}</li>
+          )
+        })}
+      </ul>
+
       {/* ví dụ 2: two way binding */}
 
       <input 
