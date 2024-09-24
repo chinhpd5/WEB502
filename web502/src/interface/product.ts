@@ -1,9 +1,16 @@
-type Product ={
-    name: string;
-    description: string;
-    image: string;
+interface IProduct{
+    id: number | string;
+    title: string;
+    description:string;
     price: number;
-    sale: boolean
+    discountPercentage: number;
+    rating: number;
+    stock: number;
+    brand: string;
+    category:string;
+    thumbnail:string;
+    images:string[]
+
 }
 
-export default Product
+export default IProduct;
