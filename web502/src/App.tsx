@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import IProduct from './interface/Product'
 import { instance } from './config/configAxios'
+import ListProduct from './components/ListProduct'
 
 
 function App() {
@@ -29,7 +30,11 @@ function App() {
   
   return (
     <>
-      
+      <h1 className='text-danger'>Xin chào</h1>
+      {/* <ListProduct/> */}
+      {/* 
+        Hiển danh sách sản phẩm (products) bằng bootstrap
+      */}
     </>
   )
 }
