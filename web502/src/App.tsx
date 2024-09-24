@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Product from './interface/product'
 
 /**
  * Tạo function component ListProduct 
@@ -15,15 +14,17 @@ function App() {
     useState
       <{id:number, body:string,title:string, userId:number}[]>
     ([])
-
+  const [type,setType]= useState<string>('posts')
     /**
-     * useEffect(()=>{}): gọi lại mỗi khi component render
-     * useEffect(()=>{},[]): gọi duy nhất lần đầu tiên
+     * useEffect(()=>{}): gọi lại callback mỗi khi component render
+     * useEffect(()=>{},[]): gọi callback duy nhất lần đầu tiên
+     * useEffect(()=>{},[deps]): gọi callback mỗi khi deps thay đổi
      */
-
+  console.log(type);
+  
   useEffect(()=>{
     //call api
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(`https://jsonplaceholder.typicode.com/${type}`)
       .then((response)=>{
         // console.log(response);
         return response.json()
@@ -32,7 +33,7 @@ function App() {
         // console.log(dataRes);
         setData(dataRes)
       })
-  },[])
+  },[type])
   
   //useState
   //ví dụ 1
@@ -90,6 +91,8 @@ function App() {
   return (
     <>
       {/* ví dụ 3:  */}
+      <button onClick={()=>{setType('posts')}}>Bài viết</button>
+      <button onClick={()=>{setType('albums')}}>Bộ sưu tập</button>
       <ul>
         {data?.map((item,index)=>{
           return(
