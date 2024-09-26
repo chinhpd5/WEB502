@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import IProduct from "../interface/product";
 
 type Props = {
@@ -16,7 +17,9 @@ function ListProduct(props: Props) {
                     <div className="card" style={{ width: "18rem" }}>
                     <img src={item.thumbnail} className="card-img-top" alt={item.title} />
                     <div className="card-body">
-                        <h5 className="card-title text-1-lines">{item.title}</h5>
+                        <Link to={`${item.id}`}><h5 className="card-title text-1-lines">{item.title}</h5></Link>
+                        {/* <Link to={`/product/${item.id}`}><h5 className="card-title text-1-lines">{item.title}</h5></Link> */}
+                        
                         <p className="card-text text-2-lines">
                             {item.description}
                         </p>

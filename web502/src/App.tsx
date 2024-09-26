@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import ClientLayout from './pages/ClientLayout'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 
 function App() {
@@ -20,7 +21,17 @@ function App() {
         },
         {
           path: "product",
-          element: <ProductPage/>
+          // element: <ProductPage/>
+          children:[
+            {
+              path: "",
+              element: <ProductPage/>
+            },
+            {
+              path:':id', // product/:id
+              element:<ProductDetailPage/>
+            }
+          ]
         },
         {
           path:"news",
@@ -29,7 +40,11 @@ function App() {
         {
           path:"contact",
           element: <h1>Liên hệ</h1>
-        }
+        },
+        // {
+        //   path:"product/:id",
+        //   element: <ProductDetailPage/>
+        // }
       ]
     }
 
