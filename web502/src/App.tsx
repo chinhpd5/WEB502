@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import IProduct from './interface/Product'
 import { instance } from './config/configAxios'
 import ListProduct from './components/ListProduct'
+import IProduct from './interface/product'
 
 
 function App() {
@@ -25,13 +25,12 @@ function App() {
     })();
   },[])
 
-  console.log(products);
-  
+  // console.log(products);
   
   return (
     <>
-      <h1 className='text-danger'>Xin chào</h1>
-      {/* <ListProduct/> */}
+      {/* <h1 className='text-danger'>Xin chào</h1> */}
+      <ListProduct listProduct={products}/>
       {/* 
         npm i bootstrap
         thêm 
