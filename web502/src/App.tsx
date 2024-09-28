@@ -51,7 +51,7 @@ function App() {
     },
     { // quản trị viên
       path: "/admin",
-      element:<AdminLayout/>,
+      element:<AdminLayout/>,//Outlet
       children: [
         {
           path:"",// admin
