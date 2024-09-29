@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { instance } from "../../../config/configAxios";
 import IProduct from "../../../interface/product";
+import { Link } from "react-router-dom";
 
 function ListProduct() {
   //10p: sử useEffect để lấy danh sách sản phẩm
@@ -25,6 +26,8 @@ function ListProduct() {
   return (
     <>
       <h1>Danh sách sản phẩm</h1>
+      <Link to={`add`} className="btn btn-primary m-3">Thêm mới sản phẩm</Link>
+      {/* <Link to={`/admin/product/add`}>Thêm mới sản phẩm</Link> */}
 
       <table className="table table-bordered table-striped table-hover">
         <thead>

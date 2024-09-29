@@ -6,6 +6,7 @@ import ClientLayout from './pages/ClientLayout'
 import ProductDetailPage from './pages/ProductDetailPage'
 import AdminLayout from './pages/AdminLayout'
 import ListProduct from './pages/admin/product/ListProduct'
+import AddProduct from './pages/admin/product/AddProduct'
 
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
             },
             {
               path:"add",// admin/product/add
-              element: <h1>Thêm mới sản phẩm</h1>
+              element: <AddProduct/>
             },
             {
               path: "edit",//admin/product/edit
