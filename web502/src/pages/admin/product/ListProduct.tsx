@@ -23,6 +23,28 @@ function ListProduct() {
 
   console.log(listProduct);
 
+  const handleDelte = async (id:string|number)=>{
+    console.log(id);
+    if(window.confirm("Bạn có chắc chắn muốn xóa hay không?")){
+      try {
+        await instance.delete(`/products/${id}`);
+        alert("Xóa thành công");
+
+        setListProduct((pre)=>{
+          return pre.filter((item)=>{
+            return item.id != id;
+          })
+        })
+
+        // setListProduct(pre => pre.filter(item => item.id !=id))
+
+      } catch (error) {
+        alert("Xóa thất bại")
+      }
+    }
+    
+  }
+
   return (
     <>
       <h1>Danh sách sản phẩm</h1>
@@ -38,6 +60,7 @@ function ListProduct() {
             <th scope="col">Giá bán</th>
             <th scope="col">Hình Ảnh</th>
             <th scope="col">Mô tả</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +74,9 @@ function ListProduct() {
                   <td>{item.price}</td>
                   <td><img style={{width:"100px"}} src={item.thumbnail} alt={item.title} /></td>
                   <td>{item.description}</td>
+                  <td>
+                    <button onClick={()=>{handleDelte(item.id)}} className="btn btn-danger">Xóa</button>
+                  </td>
                 </tr>
               )
             })

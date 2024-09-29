@@ -14,11 +14,11 @@ function AddProduct() {
   const [data,setData]= useState<ProductInput>(init);
   const navigate = useNavigate();
 
-  const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
+  const handleSubmit =async(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     // console.log(data);
     try {
-      instance.post(`/products`,data);
+      await instance.post(`/products`,data);
       alert("Thêm sản phẩm thành công");
       // setData(init)
       // chuyển về trang danh sách sản phẩm

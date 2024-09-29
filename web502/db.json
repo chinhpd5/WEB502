@@ -499,20 +499,6 @@
         "https://cdn.dummyjson.com/product-images/30/3.jpg",
         "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
       ]
-    },
-    {
-      "id": "bc49",
-      "title": "chinhpd5",
-      "price": "20000",
-      "description": "mô tả",
-      "thumbnail": "https://picsum.photos/200/200"
-    },
-    {
-      "id": "8df5",
-      "title": "sản phẩm 2",
-      "price": "3000",
-      "description": "mô tả 2",
-      "thumbnail": "https://picsum.photos/200/200"
     }
   ]
 }
