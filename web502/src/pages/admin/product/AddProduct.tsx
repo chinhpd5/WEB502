@@ -14,7 +14,12 @@ function AddProduct() {
   const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     console.log(data);
-        
+  }
+  const handleChangeInput=(key:string, e:React.ChangeEvent<HTMLInputElement>)=>{
+    setData((pre)=>{ //title,price
+      //spread
+      return {...pre, [key] : e.target.value}
+    })
   }
 
   return (
@@ -31,13 +36,7 @@ function AddProduct() {
               type="text"
               value={data.title}
               onChange={
-                (e)=>{
-                  setData((pre)=>{
-                    //spread
-                    return {...pre, title: e.target.value}
-                  })
-                  
-                }
+                (e)=>{handleChangeInput("title",e)}
               }
               className="form-control"
               id="title"
@@ -54,11 +53,7 @@ function AddProduct() {
               id="price"
               value={data.price}
               onChange={
-                (e)=>{
-                  setData((pre)=>{
-                    return {...pre,price: Number(e.target.value)}
-                  })
-                }
+                (e)=>{handleChangeInput("price",e)}
               }
             />
           </div>
@@ -72,6 +67,10 @@ function AddProduct() {
               type="text"
               className="form-control"
               id="thumbnail"
+              value={data.thumbnail}
+              onChange={
+                (e)=>{handleChangeInput("thumbnail",e)}
+              }
             />
           </div>
 
@@ -84,6 +83,14 @@ function AddProduct() {
               type="text"
               className="form-control"
               id="description"
+              value={data.description}
+              onChange={
+                (e)=>{
+                  setData((pre)=>{
+                    return {...pre,description: e.target.value}
+                  })
+                }
+              }
             />
           </div>
 
