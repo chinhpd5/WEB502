@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { ProductInput } from "../../../interface/product";
+import { instance } from "../../../config/configAxios";
+import { useNavigate } from "react-router-dom";
 
 const init:ProductInput ={
   title:'',
@@ -9,11 +11,23 @@ const init:ProductInput ={
 }
 
 function AddProduct() {
-  const [data,setData]= useState<ProductInput>(init)
+  const [data,setData]= useState<ProductInput>(init);
+  const navigate = useNavigate();
 
   const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
-    console.log(data);
+    // console.log(data);
+    try {
+      instance.post(`/products`,data);
+      alert("Thêm sản phẩm thành công");
+      // setData(init)
+      // chuyển về trang danh sách sản phẩm
+      navigate('/admin/product')
+      
+    } catch (error) {
+      alert("Thêm mới sản phẩm thất bại: "+ error)
+    }
+
   }
   const handleChangeInput=(key:string, e:React.ChangeEvent<HTMLInputElement>)=>{
     setData((pre)=>{ //title,price
