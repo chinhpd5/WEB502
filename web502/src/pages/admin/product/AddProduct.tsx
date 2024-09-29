@@ -1,9 +1,27 @@
+import { useState } from "react";
+import { ProductInput } from "../../../interface/product";
+
+const init:ProductInput ={
+  title:'',
+  price:0,
+  description:'',
+  thumbnail:''
+}
+
 function AddProduct() {
+  const [data,setData]= useState<ProductInput>(init)
+
+  const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+    console.log(data);
+        
+  }
+
   return (
     <>
       <h1>Thêm mới sản phẩm </h1>
       <div className="container">
-        <form>
+        <form onSubmit={(e)=>{handleSubmit(e)}}>
             {/* Tên sản phẩm */}
           <div className="mb-3">
             <label htmlFor="title" className="form-label">
@@ -11,6 +29,16 @@ function AddProduct() {
             </label>
             <input
               type="text"
+              value={data.title}
+              onChange={
+                (e)=>{
+                  setData((pre)=>{
+                    //spread
+                    return {...pre, title: e.target.value}
+                  })
+                  
+                }
+              }
               className="form-control"
               id="title"
             />
@@ -24,6 +52,14 @@ function AddProduct() {
               type="number"
               className="form-control"
               id="price"
+              value={data.price}
+              onChange={
+                (e)=>{
+                  setData((pre)=>{
+                    return {...pre,price: Number(e.target.value)}
+                  })
+                }
+              }
             />
           </div>
 
