@@ -11,24 +11,27 @@ const init:ProductInput ={
 }
 
 function EditProduct(){
+    // 1.lấy id trên URL
     const {id} = useParams();
     // console.log(id);
     const [product,setProduct]= useState<ProductInput>(init);
     const navigate = useNavigate();
 
     useEffect(()=>{
+        //2. lấy thông tin sản phẩm theo id 
         const getProductById = async(id:string)=>{
             try {
-                const data = await instance.get(`/products/${id}`)
-                // console.log(data);
-                if(data.data){
-                    setProduct(data.data)
+                const res = await instance.get(`/products/${id}`)
+                // console.log(res);
+                if(res.data){
+                    setProduct(res.data)
                 }
                 
             } catch (error) {
                 alert("Lỗi")
             }
         }
+        // 3. gọi
         if(id){
             getProductById(id);
         }
@@ -36,7 +39,7 @@ function EditProduct(){
 
     },[id])
     
-
+    // 4. cập nhật dữ vào db
     const handleSubmit =async (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
         // console.log(product);
