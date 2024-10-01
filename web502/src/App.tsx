@@ -7,6 +7,7 @@ import ProductDetailPage from './pages/ProductDetailPage'
 import AdminLayout from './pages/AdminLayout'
 import ListProduct from './pages/admin/product/ListProduct'
 import AddProduct from './pages/admin/product/AddProduct'
+import EditProduct from './pages/admin/product/EditProduct'
 
 
 function App() {
@@ -70,8 +71,8 @@ function App() {
               element: <AddProduct/>
             },
             {
-              path: "edit",//admin/product/edit
-              element: <h1>Cập nhật sản phẩm</h1>
+              path: "edit/:id",//admin/product/edit
+              element: <EditProduct/>
             }
           ]
         }

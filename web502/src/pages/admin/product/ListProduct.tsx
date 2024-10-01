@@ -29,7 +29,8 @@ function ListProduct() {
       try {
         await instance.delete(`/products/${id}`);
         alert("Xóa thành công");
-
+        
+        // loại bỏ phần tử xóa trong listProduct
         setListProduct((pre)=>{
           return pre.filter((item)=>{
             return item.id != id;
@@ -76,6 +77,7 @@ function ListProduct() {
                   <td>{item.description}</td>
                   <td>
                     <button onClick={()=>{handleDelte(item.id)}} className="btn btn-danger">Xóa</button>
+                    <Link to={`edit/${item.id}`} className="btn btn-warning">Sửa</Link>
                   </td>
                 </tr>
               )
