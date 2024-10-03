@@ -500,5 +500,28 @@
         "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
       ]
     }
+  ],
+  "users": [
+    {
+      "id": "970e",
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "name": "admin",
+      "age": 20
+    },
+    {
+      "id": "8816",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "name": "username",
+      "age":25
+    },
+    {
+      "id": "77y5",
+      "email": "guest@gmail.com",
+      "password": "123456a",
+      "name": "guest",
+      "age":21
+    }
   ]
 }
