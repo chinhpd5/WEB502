@@ -72,7 +72,8 @@ function ListUser() {
                             <td>{item.password}</td>
                             <td>{item.age}</td>
                             <td>
-                                <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>
+                              <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>
+                              <Link className="btn btn-warning" to={`edit/${item.id}`}>Sửa</Link>
                             </td>
                         </tr>
                     )

@@ -525,17 +525,37 @@
     },
     {
       "id": "e0df",
-      "name": "chinhpd5",
+      "name": "chinhpd5 new",
       "email": "chinhpd5@fpt.edu.vn",
-      "password": "123456",
-      "age": "20"
+      "password": "654321",
+      "age": "30"
     },
     {
       "id": "43b2",
-      "name": "abc",
+      "name": "abc new",
       "email": "abc@gmail.com.vn",
       "password": "123456",
       "age": "20"
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "nameBrand": "IPhone",
+      "rating": 8,
+      "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)"
+    },
+    {
+      "id": "2",
+      "nameBrand": "SamSung",
+      "rating": 8.5,
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality"
+    },
+    {
+      "id": "3",
+      "nameBrand": "OPPO",
+      "rating": 7,
+      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen."
     }
   ]
 }

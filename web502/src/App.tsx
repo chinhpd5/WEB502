@@ -10,6 +10,7 @@ import AddProduct from './pages/admin/product/AddProduct'
 import EditProduct from './pages/admin/product/EditProduct'
 import ListUser from './pages/admin/user/ListUser'
 import AddUser from './pages/admin/user/AddUser'
+import EditUser from './pages/admin/user/EditUser'
 
 
 function App() {
@@ -84,9 +85,14 @@ function App() {
             {
               path: '',// admin/user
               element: <ListUser/>
-            },{
+            },
+            {
               path: 'add',// admin/user/add
               element: <AddUser/>
+            },
+            {
+              path: 'edit/:id', // admin/user/123
+              element: <EditUser/>
             }
           ] 
         }
