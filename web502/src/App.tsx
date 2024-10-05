@@ -8,6 +8,8 @@ import AdminLayout from './pages/AdminLayout'
 import ListProduct from './pages/admin/product/ListProduct'
 import AddProduct from './pages/admin/product/AddProduct'
 import EditProduct from './pages/admin/product/EditProduct'
+import ListUser from './pages/admin/user/ListUser'
+import AddUser from './pages/admin/user/AddUser'
 
 
 function App() {
@@ -75,6 +77,18 @@ function App() {
               element: <EditProduct/>
             }
           ]
+        },
+        {
+          path: 'user',// admin/user
+          children:[
+            {
+              path: '',// admin/user
+              element: <ListUser/>
+            },{
+              path: 'add',// admin/user/add
+              element: <AddUser/>
+            }
+          ] 
         }
       ]
     }

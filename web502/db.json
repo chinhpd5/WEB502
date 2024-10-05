@@ -514,14 +514,28 @@
       "email": "user@gmail.com",
       "password": "123456",
       "name": "username",
-      "age":25
+      "age": 25
     },
     {
       "id": "77y5",
       "email": "guest@gmail.com",
       "password": "123456a",
       "name": "guest",
-      "age":21
+      "age": 21
+    },
+    {
+      "id": "e0df",
+      "name": "chinhpd5",
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "123456",
+      "age": "20"
+    },
+    {
+      "id": "43b2",
+      "name": "abc",
+      "email": "abc@gmail.com.vn",
+      "password": "123456",
+      "age": "20"
     }
   ]
 }
