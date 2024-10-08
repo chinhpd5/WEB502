@@ -12,6 +12,7 @@ import ListUser from './pages/admin/user/ListUser'
 import AddUser from './pages/admin/user/AddUser'
 import EditUser from './pages/admin/user/EditUser'
 import Register from './pages/Register'
+import Login from './pages/Login'
 
 
 function App() {
@@ -56,6 +57,10 @@ function App() {
         {
           path: 'register',
           element: <Register/>
+        },
+        {
+          path: 'login',
+          element: <Login/>
         }
       ]
     },

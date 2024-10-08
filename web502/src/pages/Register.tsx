@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { RegisterInput } from "../interface/user";
 import { instance } from "../config/configAxios";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
     const {
@@ -9,12 +10,16 @@ function Register() {
         formState: {errors},
         watch
     } = useForm<RegisterInput>();
+    const navigate = useNavigate();
 
     const onSubmit= async (data:RegisterInput)=>{
        try {
             const {email,password} = data;// destructuring
             const res = await instance.post('/register',{email,password});
             console.log(res);
+            alert("Đăng kí thành công")
+            // chuyển trang đăng nhập
+            navigate("/login");
        } catch (error:any) {
             alert(error.response.data)
        }
