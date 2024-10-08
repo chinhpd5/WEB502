@@ -11,6 +11,7 @@ import EditProduct from './pages/admin/product/EditProduct'
 import ListUser from './pages/admin/user/ListUser'
 import AddUser from './pages/admin/user/AddUser'
 import EditUser from './pages/admin/user/EditUser'
+import Register from './pages/Register'
 
 
 function App() {
@@ -51,7 +52,11 @@ function App() {
         // {
         //   path:"product/:id",
         //   element: <ProductDetailPage/>
-        // }
+        // },
+        {
+          path: 'register',
+          element: <Register/>
+        }
       ]
     },
     { // quản trị viên
@@ -98,10 +103,6 @@ function App() {
         }
       ]
     }
-
-    
-    
-    
   ])
 
   

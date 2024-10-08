@@ -536,6 +536,22 @@
       "email": "abc@gmail.com.vn",
       "password": "123456",
       "age": "20"
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$KyVrPaBqZL6KIDHs6fXSB.U/S66iHmkElJewT/TBrPjozk2e96UTK",
+      "confirmPassword": "123456",
+      "id": "G-mOICy"
+    },
+    {
+      "email": "a1@gmail.com",
+      "password": "$2a$10$0.M9bYx9EOYq7rmTW5HIxuDCAd6q0rxwvy3AWUIX5x2k4qIFdtuJO",
+      "id": "ir2go0G"
+    },
+    {
+      "email": "a2@gmail.com",
+      "password": "$2a$10$XOgiyztV3jFze8KqNbMV8.ieazkndopnWjFH8YpAu0HwouV8rUFtW",
+      "id": "ojOoJwL"
     }
   ],
   "brands": [
