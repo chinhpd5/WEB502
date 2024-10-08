@@ -1,5 +1,5 @@
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import ClientLayout from './pages/ClientLayout'
@@ -113,7 +113,33 @@ function App() {
   
   return (
     <>
-      <RouterProvider router={routers} />
+      {/* <RouterProvider router={routers} /> */}
+
+      <Routes>
+          {/* client */}
+          <Route path='/' element={<ClientLayout/>} >
+            <Route path='' element={<HomePage/>}/>
+            <Route path='about' element={ <h1>Trang about</h1> }/>
+            <Route path='product' element={<ProductPage/>}/>
+            <Route path='product/:id' element={<ProductDetailPage/>}/>
+          </Route>
+
+
+        {/* admin */}
+          <Route path='/admin' element={<AdminLayout/>} >
+            <Route path='product'>
+              <Route path='' element={<ListProduct/>} />
+              <Route path='add' element={<AddProduct/>} />
+              <Route path='edit/:id' element={<EditProduct/>} />
+            </Route>
+
+            <Route path='user'>
+
+            </Route>
+          </Route>
+
+      </Routes>
+
     </>
   )
 }
