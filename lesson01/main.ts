@@ -35,3 +35,21 @@ console.log(
   Tuổi: ${myInfo.age}, 
   Giới tính: ${myInfo.gender ? 'Nam': 'Nữ'}`
 );
+
+function showInfo(name: string): string {
+  return `Xin chào ${name}`
+}
+
+console.log(showInfo('chinhpd5'));
+
+const sum = (a: number, b: number): number => {
+  return a+b;
+}
+console.log(sum(1, 2));
+
+const myFun = (): void => {
+  console.log("Hello");
+  
+}
+myFun()
+

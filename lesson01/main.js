@@ -21,3 +21,15 @@ var myInfo = {
     gender: false
 };
 console.log("T\u00F4i t\u00EAn l\u00E0 ".concat(myInfo.name, ", \n  Tu\u1ED5i: ").concat(myInfo.age, ", \n  Gi\u1EDBi t\u00EDnh: ").concat(myInfo.gender ? 'Nam' : 'Nữ'));
+function showInfo(name) {
+    return "Xin ch\u00E0o ".concat(name);
+}
+console.log(showInfo('chinhpd5'));
+var sum = function (a, b) {
+    return a + b;
+};
+console.log(sum(1, 2));
+var myFun = function () {
+    console.log("Hello");
+};
+myFun();
