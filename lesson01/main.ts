@@ -39,5 +39,21 @@ console.log(`
   Giới tính: ${myInfo.gender ? 'Nam': 'Nữ'}  
 `);
 
+function sum(a: number, b: number): number {
+  return a+b;
+}
+console.log(sum(1, 1));
+
+const sayHello = (name: string): string => {
+  return `Xin chào ${name}`
+}
+console.log(sayHello('chinhpd5'));
+
+const doLogic = (): void => {
+  console.log("123");
+}
+
+
+
 
 

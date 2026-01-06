@@ -23,3 +23,14 @@ var myInfo = {
     gender: false
 };
 console.log("\n  H\u1ECD v\u00E0 t\u00EAn: ".concat(myInfo.name, ",\n  Tu\u1ED5i: ").concat(myInfo.age, ",\n  Gi\u1EDBi t\u00EDnh: ").concat(myInfo.gender ? 'Nam' : 'Nữ', "  \n"));
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(1, 1));
+var sayHello = function (name) {
+    return "Xin ch\u00E0o ".concat(name);
+};
+console.log(sayHello('chinhpd5'));
+var doLogic = function () {
+    console.log("123");
+};
