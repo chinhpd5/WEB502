@@ -15,3 +15,29 @@ let myMath: number = -10;
 let myGender: boolean = true;
 // myGender = 1
 
+let myArray: string[] = ["Long", "Bình", "Cường"];
+let myArray1: number[] = [1, 2, -10, 5.5];
+
+for(let i: number = 0; i< myArray.length; i++){
+  console.log(myArray[i]);
+}
+
+//object
+let myInfo: {
+  name: string,
+  age: number,
+  gender: boolean
+} = {
+  name: 'chinhpd5',
+  age: 10,
+  gender: false
+}
+
+console.log(`
+  Họ và tên: ${myInfo.name},
+  Tuổi: ${myInfo.age},
+  Giới tính: ${myInfo.gender ? 'Nam': 'Nữ'}  
+`);
+
+
+
