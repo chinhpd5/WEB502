@@ -14,3 +14,16 @@ enum Status {
 let myStatus: Status = Status.WARNING
 console.log(myStatus);
 
+// any
+let myVar: any = 'chinhpd5';
+console.log(myVar.toUpperCase());
+myVar = 10;
+myVar = true;
+
+// unknown
+let myVar1: unknown = 'abc';
+if(typeof myVar1 == 'string'){
+  console.log(myVar1.toUpperCase());
+}
+myVar1 = 10;
+
