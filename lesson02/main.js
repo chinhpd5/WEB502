@@ -12,4 +12,14 @@ var Status;
     Status["ERROR"] = "error";
 })(Status || (Status = {}));
 let myStatus = Status.WARNING;
-console.log(myStatus);
+// console.log(myStatus);
+// any
+let myName = 'chinhpd5';
+// myName = 10;
+console.log(myName.toUpperCase());
+// unknow
+let myAge = 'chinhpd5';
+// myAge =10
+if (typeof myAge == 'string') {
+    console.log(myAge.toUpperCase());
+}
