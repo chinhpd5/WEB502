@@ -32,4 +32,31 @@ let myArray1 = [1, 'a', 2];
 // Literal
 let myLiteral;
 myLiteral = 'success';
-// myLiteral = 'warn1';
+let person1 = {
+    id: 1,
+    name: "chinhpd5",
+    gender: true
+};
+let person2 = {
+    id: 2,
+    name: "Nguyễn Văn A",
+    // gender: false
+};
+let student1 = {
+    id: 3,
+    name: "Trần Thị B",
+    gender: false,
+    major: "Công nghệ thông tin"
+};
+let person3 = {
+    id: 4,
+    name: "Trần Văn D",
+    gender: true
+};
+let student3 = {
+    id: 5,
+    name: "Nguyễn F",
+    gender: true,
+    major: 'Marketing',
+    GPA: 9.0
+};

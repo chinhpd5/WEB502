@@ -44,4 +44,60 @@ let myLiteral: 'success'|'warn'|'error';
 myLiteral = 'success';
 // myLiteral = 'warn1';
 
+// type
+type Person = {
+  id: number,
+  name: string,
+  gender?: boolean
+}
 
+let person1: Person = {
+  id: 1,
+  name: "chinhpd5",
+  gender: true
+}
+
+let person2: Person = {
+  id: 2,
+  name: "Nguyễn Văn A",
+  // gender: false
+}
+
+type Student = Person & {
+  major: string
+}
+
+let student1: Student = {
+  id: 3,
+  name: "Trần Thị B",
+  gender: false,
+  major: "Công nghệ thông tin"
+}
+
+// interface
+
+interface IPerson {
+  id: number,
+  name: string,
+  gender?: boolean
+}
+
+let person3: IPerson = {
+  id: 4,
+  name: "Trần Văn D",
+  gender: true
+}
+
+// IStudent kế thừa IPerson
+interface IStudent extends IPerson {
+  major: string,
+  GPA: number
+}
+
+let student3: IStudent = {
+  id: 5,
+  name: "Nguyễn F",
+  gender: true,
+  major: 'Marketing',
+  GPA: 9.0
+}
