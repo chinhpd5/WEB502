@@ -32,4 +32,28 @@ myArray = ['a', 'b', 'c'];
 let myArray2 = [1, "a", -3, 'abc'];
 // literal
 let myLiteral = "warning";
-// myLiteral = 'abc'
+let person1 = {
+    id: 1,
+    name: 'Nguyễn Văn A',
+    gender: true
+};
+let person2 = {
+    id: 2,
+    name: "Trần Thị B",
+};
+let student1 = {
+    id: 3,
+    name: "Nguyễn Văn C",
+    gender: true,
+    major: "Công nghệ thông tin"
+};
+let person3 = {
+    id: 5,
+    name: "Đặng Thị F"
+};
+let student2 = {
+    id: 6,
+    name: "Nguyễn Văn H",
+    major: "Marketing",
+    GPA: 8.5
+};
