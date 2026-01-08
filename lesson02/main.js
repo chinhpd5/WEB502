@@ -60,3 +60,16 @@ let student3 = {
     major: 'Marketing',
     GPA: 9.0
 };
+// Generic <>
+function dosomething1(a) {
+    return a;
+}
+function dosomething2(a) {
+    return a;
+}
+function dosomething(a) {
+    return a;
+}
+dosomething(1);
+dosomething("a");
+dosomething(person1);
