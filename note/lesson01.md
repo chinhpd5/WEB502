@@ -48,9 +48,11 @@ tsc --init
 ```json
 {
   "compilerOptions": {
-    "target": "ES6",        // Chuẩn JS đầu ra
-    "strict": true,         // Bật kiểm tra type chặt chẽ
-    "outDir": "dist"        // Thư mục chứa JS sau khi compile
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+    "module": "commonjs",
+    "target": "esnext",
+    "strict": true,
   }
 }
 ```

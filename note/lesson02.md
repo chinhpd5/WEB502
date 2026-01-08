@@ -181,3 +181,56 @@ interface StudentInterface {
 | Tuple               | ✅             | ❌            |   |
 | Literal type        | ✅             | ❌            |   |
 | Extend / kế thừa    | `&`            | `extends`      |   |
+
+## Bài tập
+
+### Bài 1:
+1. Tạo type Product gồm các thuộc tính:
+- id: number
+- name: string
+- price: number
+- inStock: boolean
+
+2. Khai báo một mảng `products` kiểu `Product[]` và thêm ít nhất 3 sản phẩm.
+
+3. Viết hàm `showInfomation`:
+- Nhận vào `products: Product[]`
+- In thông tin danh sách các sản phẩm
+```
+STT: 1,Tên sản phẩm: Sản phẩm a, Giá bán: 1000 VNĐ, Trạng thái: Còn hàng 
+STT: 2,Tên sản phẩm: Sản phẩm b, Giá bán: 2000 VNĐ, Trạng thái: Hết hàng 
+...
+```
+
+4. Viết hàm `getAvailableProducts`:
+- Nhận vào `products: Product[]`
+- Trả về danh sách sản phẩm còn hàng (`inStock === true`)
+
+5. Viết hàm calculateTotalPrice:
+- Nhận vào `products: Product[]`
+- Trả về tổng giá của tất cả sản phẩm
+
+### Bài 2:
+1. Tạo interface `ILearner` gồm các thuộc tính:
+- id: number
+- name: string
+- score: number
+
+Tạo `interface` `IStudent` kế thừa từ `ILearner`, bổ sung:
+- graduationYear: number
+- level: "Excellent" | "Good" | "Average"
+
+2. Khai báo mảng `students` kiểu `IStudent[]` và thêm ít nhất 4 học viên
+
+3. Viết hàm `getPassedStudents`:
+- Nhận vào `students: IStudent[]`
+- Trả về danh sách học viên có `score >= 5`
+
+4. Viết hàm `getStudentNames`:
+- Nhận vào `students: IStudent[]`
+- Trả về mảng tên học viên (string[])
+
+5. 
+Viết hàm `getExcellentStudents`:
+- Nhận vào students: IStudent[]
+- Trả về danh sách học viên có level === "Excellent"
