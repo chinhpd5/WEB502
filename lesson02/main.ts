@@ -30,3 +30,18 @@ if(typeof myAge == 'string'){
   console.log(myAge.toUpperCase());
 }
 
+// union
+let myVar: string|number|boolean = 'chinhpd5';
+myVar = true
+
+let myArray: string[]|number[] = ['a', 'b', 'c']
+myArray = [1, 2, 3]
+
+let myArray1: (string|number)[] = [1, 'a', 2]
+
+// Literal
+let myLiteral: 'success'|'warn'|'error';
+myLiteral = 'success';
+// myLiteral = 'warn1';
+
+

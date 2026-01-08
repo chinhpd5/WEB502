@@ -23,3 +23,13 @@ let myAge = 'chinhpd5';
 if (typeof myAge == 'string') {
     console.log(myAge.toUpperCase());
 }
+// union
+let myVar = 'chinhpd5';
+myVar = true;
+let myArray = ['a', 'b', 'c'];
+myArray = [1, 2, 3];
+let myArray1 = [1, 'a', 2];
+// Literal
+let myLiteral;
+myLiteral = 'success';
+// myLiteral = 'warn1';
