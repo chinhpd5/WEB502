@@ -57,3 +57,16 @@ let student2 = {
     major: "Marketing",
     GPA: 8.5
 };
+// Generic
+function doSomeThing1(a) {
+    return a;
+}
+function doSomeThing2(a) {
+    return a;
+}
+function doSomeThing(a) {
+    return a;
+}
+doSomeThing(1);
+doSomeThing("a");
+doSomeThing(student2);

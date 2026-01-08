@@ -94,3 +94,21 @@ let student2: IStudent = {
   major: "Marketing",
   GPA: 8.5
 }
+
+// Generic
+
+function doSomeThing1(a: number): number {
+  return a;
+}
+
+function doSomeThing2(a: string): string {
+  return a;
+}
+
+function doSomeThing<T>(a: T): T {
+  return a;
+}
+
+doSomeThing<number>(1)
+doSomeThing<string>("a")
+doSomeThing<IStudent>(student2)
