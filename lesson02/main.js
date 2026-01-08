@@ -23,3 +23,13 @@ if (typeof myVar1 == 'string') {
     console.log(myVar1.toUpperCase());
 }
 myVar1 = 10;
+// union
+let myVar2 = 'abc';
+myVar2 = 12;
+myVar2 = true;
+let myArray = [1, 2, 3, 4];
+myArray = ['a', 'b', 'c'];
+let myArray2 = [1, "a", -3, 'abc'];
+// literal
+let myLiteral = "warning";
+// myLiteral = 'abc'

@@ -27,3 +27,18 @@ if(typeof myVar1 == 'string'){
 }
 myVar1 = 10;
 
+// union
+let myVar2: string | number | boolean = 'abc';
+myVar2 = 12;
+myVar2 = true;
+
+let myArray: number[]|string[] = [1,2,3,4];
+myArray = ['a','b','c']
+
+let myArray2: (number|string)[] = [1, "a", -3, 'abc']
+
+// literal
+
+let myLiteral: "success"|"warning"|"error" ="warning"
+
+// myLiteral = 'abc'
