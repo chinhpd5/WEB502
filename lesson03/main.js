@@ -38,7 +38,42 @@ class Student extends Person {
         this.major = major;
         this.GPA = GPA;
     }
+    // tính đa hình
+    showInfo() {
+        return `
+      Họ và tên: ${this.name},
+      Khoa: ${this.major},
+      Điểm: ${this.GPA}
+    `;
+    }
 }
 const student1 = new Student(2, "chinhpd6", false, 'Công nghệ thông tin', 8.5);
 console.log(student1.name);
 console.log(student1.showInfo());
+// Tính trừu tượng
+class Shape {
+}
+class Circle extends Shape {
+    r;
+    constructor(r) {
+        super();
+        this.r = r;
+    }
+    area() {
+        return Math.PI * this.r * this.r;
+    }
+}
+const circle1 = new Circle(10);
+console.log(circle1.area());
+class Square extends Shape {
+    d;
+    constructor(d) {
+        super();
+        this.d = d;
+    }
+    area() {
+        return this.d * this.d;
+    }
+}
+const square1 = new Square(10);
+console.log(square1.area());

@@ -48,6 +48,15 @@ class Student extends Person{
     this.major = major;
     this.GPA = GPA;
   }
+
+  // tính đa hình
+  showInfo(): string {
+    return `
+      Họ và tên: ${this.name},
+      Khoa: ${this.major},
+      Điểm: ${this.GPA}
+    `
+  }
 }
 
 
@@ -55,6 +64,41 @@ const student1: Student = new Student(2,"chinhpd6", false,'Công nghệ thông t
 console.log(student1.name);
 console.log(student1.showInfo());
 
+// Tính trừu tượng
+abstract class Shape {
+  abstract area(): number
+}
 
 
+class Circle extends Shape {
+  r: number
+
+  constructor(r: number){
+    super();
+    this.r = r;
+  }
+
+  area(): number {
+    return Math.PI * this.r * this.r
+  }
+}
+
+const circle1: Circle = new Circle(10);
+console.log(circle1.area());
+
+class Square extends Shape{
+  d: number
+
+  constructor(d: number){
+    super();
+    this.d = d;
+  }
+
+  area(): number {
+    return this.d * this.d
+  }
+}
+
+const square1: Square = new Square(10);
+console.log(square1.area());
 
