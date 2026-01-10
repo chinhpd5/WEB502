@@ -13,5 +13,7 @@ class Person {
     }
 }
 const person1 = new Person(1, 'chinhpd5', true);
+// person1.name = 'new chinhpd5'; // lỗi vì name: readonly
 console.log(person1.name);
+// console.log(person1.id); lỗi vì id: private
 console.log(person1.showInfo());
