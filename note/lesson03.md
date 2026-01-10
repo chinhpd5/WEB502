@@ -211,3 +211,52 @@ class Cat extends Animal {
   }
 }
 ```
+
+## Bài tập
+1. Câu 1: Tạo class `Product` gồm các thuộc tính:
+- id: number
+- name: string
+- price: number
+- inStock: boolean
+
+Yêu cầu:
+- Viết `constructor` để khởi tạo các thuộc tính.
+
+2. Câu 2: Trong class `Product`, viết phương thức:
+- `getInfo(): string`
+
+Yêu cầu:
+- Trả về chuỗi thông tin sản phẩm:
+```
+ID: 1 - Tên: Laptop - Giá: 15000000 - Còn hàng: Có
+```
+> (Nếu inStock == false hiển thị "Không")
+
+3. Câu 3: Trong class `Product`, viết phương thức:
+- `updatePrice(newPrice: number): void`
+Yêu cầu:
+- Cập nhật lại giá sản phẩm.
+- Không cho phép giá ≤ 0.
+
+4. Câu 4: Trong class Product, viết phương thức:
+- `toggleStock(): void`
+Yêu cầu:
+- Đổi trạng thái `inStock` từ `true → false` hoặc ngược lại.
+
+5. Câu 5: Trong class `Product`, viết phương thức:
+`isExpensive(threshold: number): boolean`
+Yêu cầu:
+- Trả về `true` nếu `price ≥ threshold`, ngược lại `false`.
+
+6. Câu 6: Tạo mảng sản phẩm:
+- `const products: Product[]`
+Yêu cầu:
+- Tạo ít nhất 3 đối tượng Product.
+Gọi các phương thức:
+- Lặp mảng `products` và sử dụng `getInfo()`
+- Sử dụng `updatePrice()` để cập nhật giá cho sản phẩm đầu tiên trong `products`
+- Sử dụng `toggleStock()` để đổi trạng thái sản phẩm thứ 2
+- Sử dụng vòng lặp để kiểm tra các sản phẩm có `isExpensive(1000000)`
+
+
+
