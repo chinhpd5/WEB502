@@ -294,6 +294,7 @@ Ví dụ:
 
 ### 4.1.2 Typography – Văn bản
 1. Kích thước và trọng số chữ
+
 | Class        | Tác dụng        |
 | ------------ | --------------- |
 | `text-sm`    | Cỡ chữ nhỏ      |
@@ -303,6 +304,7 @@ Ví dụ:
 | `font-light` | Chữ mảnh        |
 
 2. Màu chữ & căn chỉnh
+
 | Class           | Tác dụng         |
 | --------------- | ---------------- |
 | `text-gray-700` | Chữ màu xám đậm  |
@@ -313,6 +315,7 @@ Ví dụ:
 
 ### 4.1.3 Màu nền & Viền (Background & Border)
 1. Nền (`bg-`) và chữ (`text-`)
+
 | Class         | Tác dụng            |
 | ------------- | ------------------- |
 | `bg-blue-500` | Nền xanh trung bình |
@@ -320,6 +323,7 @@ Ví dụ:
 | `text-white`  | Chữ trắng           |
 
 2. Viền (`border-`)
+
 | Class             | Tác dụng                   |
 | ----------------- | -------------------------- |
 | `border`          | Thêm viền mặc định         |
