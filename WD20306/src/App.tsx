@@ -1,10 +1,11 @@
+import Tailwind from "./components/Tailwind"
 
 function App() {
 
   return (
-   <>
-    <h1 className="text-red-500 text-center">Hello world</h1>
-   </>
+    <>
+      <Tailwind/>
+    </>
   )
 }
 
