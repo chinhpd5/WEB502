@@ -5,7 +5,7 @@ function Tailwind() {
     <div className='container mx-auto'>
       <h1 className='text-5xl text-center'>Danh sách sản phẩm</h1>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+      <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
 
         {/* card sản phẩm */}
         <div className='border border-[#333] rounded p-2 w-60'>
