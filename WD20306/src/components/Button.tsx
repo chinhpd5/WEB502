@@ -2,11 +2,11 @@ import React from 'react'
 
 type PropsType = {
   children: React.ReactNode,
-  color: string,
+  color?: string,
   onClick?: () => void // có thể null
 }
 
-const renderColor = (color: string): string => {
+const renderColor = (color: string = 'blue'): string => {
   switch(color){
     case 'red':
       return 'bg-red-500 hover:bg-red-600';
