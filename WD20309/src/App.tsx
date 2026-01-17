@@ -1,10 +1,11 @@
-import Tailwind from "./components/Tailwind"
+import ShowInfo from "./components/ShowInfo"
 
 function App() {
 
   return (
    <>
-   <Tailwind/>
+    <ShowInfo name="chinhpd5" age={20} gender={true} major="cntt"/>
+    <ShowInfo name="chinhpd6" age={30} gender={false} />
    </>
   )
 }
