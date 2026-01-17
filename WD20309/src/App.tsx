@@ -1,11 +1,19 @@
-import ShowInfo from "./components/ShowInfo"
+import Button from "./components/Button"
 
 function App() {
 
+  const handleClick = ():void => {
+    console.log("Click!!!!");
+    
+  }
+
   return (
    <>
-    <ShowInfo name="chinhpd5" age={20} gender={true} major="cntt"/>
-    <ShowInfo name="chinhpd6" age={30} gender={false} />
+    <Button onClick={handleClick} color="red">Đỏ</Button>
+    <Button color="blue">Xanh dương</Button>
+    <Button color="green">Xanh lá</Button>
+    <Button color="yellow">Vàng</Button>
+    <Button>Button</Button>
    </>
   )
 }
