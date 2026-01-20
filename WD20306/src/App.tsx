@@ -1,5 +1,6 @@
 // import Tailwind from "./components/Tailwind"
 
+import Timer from "./components/Timer"
 import UseEffect from "./components/UseEffect"
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <Timer/>
     </>
   )
 }
