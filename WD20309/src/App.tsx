@@ -1,11 +1,20 @@
-import UseEffect from "./components/UseEffect"
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Product from "./pages/Product"
 
 function App() {
-
-
   return (
     <>
-      <UseEffect/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/product" element={<Product/>}/>
+        <Route path="/about" element={<h1>Trang About</h1>}/>
+        <Route path="/contact" element={<h1>Trang Liên hệ</h1>}/>
+        <Route path="/news" element={<h1>Trang tin tức</h1>}/>
+
+        <Route path="*" element={<h1>Not found</h1>}/>
+
+      </Routes>
     </>
   )
 }
