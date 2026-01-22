@@ -1,15 +1,19 @@
-// import Tailwind from "./components/Tailwind"
-
-import Timer from "./components/Timer"
-import UseEffect from "./components/UseEffect"
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Product from "./pages/Product"
 
 function App() {
-
-
   return (
     <>
-      {/* <UseEffect /> */}
-      <Timer/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/product" element={<Product/>}/>
+        <Route path="/news" element={<h1>Trang tin tức</h1>}/>
+        <Route path="/contact" element={<h1>Trang liên hệ</h1>}/>
+        <Route path="/account" element={<h1>Trang tài khoản</h1>}/>
+
+        <Route path="*" element={<h1>Not Found</h1>}/>
+      </Routes>
     </>
   )
 }
