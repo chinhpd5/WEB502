@@ -19,6 +19,9 @@ function ClientLayout() {
                   <Link to="/product" className="hover:text-blue-600 transition">Sản phẩm</Link>
                 </li>
                 <li>
+                  <Link to="/cart" className="hover:text-blue-600 transition">Cart</Link>
+                </li>
+                <li>
                   <Link to="/news" className="hover:text-blue-600 transition">Tin tức</Link>
                 </li>
                 <li>
