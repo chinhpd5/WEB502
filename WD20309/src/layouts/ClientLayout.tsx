@@ -19,6 +19,9 @@ function ClientLayout() {
               <li>
                 <Link to="/product" className="hover:text-blue-600 transition">Sản phẩm</Link>
               </li>
+               <li>
+                <Link to="/cart" className="hover:text-blue-600 transition">Cart</Link>
+              </li>
               <li>
                 <Link to="/news" className="hover:text-blue-600 transition">Tin tức</Link>
               </li>
@@ -58,6 +61,7 @@ function ClientLayout() {
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-white transition">Trang chủ</a></li>
                 <li><a href="#" className="hover:text-white transition">Sản phẩm</a></li>
+                <li><a href="#" className="hover:text-white transition">Cart</a></li>
                 <li><a href="#" className="hover:text-white transition">Tin tức</a></li>
                 <li><a href="#" className="hover:text-white transition">Liên hệ</a></li>
                 <li><a href="#" className="hover:text-white transition">Tài khoản</a></li>

@@ -4,6 +4,7 @@ import Product from "./pages/Product"
 import ClientLayout from "./layouts/ClientLayout"
 import AdminLayout from "./layouts/AdminLayout"
 import ProductDetail from "./pages/ProductDetail"
+import Cart from "./pages/Cart"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<ClientLayout/>}>
           <Route path="" element={<Home/>}/>
           <Route path="product" element={<Product/>}/>
+          <Route path="cart" element={<Cart/>}/>
           <Route path="product/:id" element={<ProductDetail/>}/>
           <Route path="about" element={<h1>Trang About</h1>}/>
           <Route path="contact" element={<h1>Trang Liên hệ</h1>}/>
