@@ -23,6 +23,7 @@ function App() {
 
         <Route path="/admin" element={<AdminLayout/>}>
           {/* Route của quản trị viên */}
+          
         </Route>
 
         <Route path="*" element={<h1>Not found</h1>}/>
