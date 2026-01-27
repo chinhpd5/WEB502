@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import type { IProduct } from '../../../interfaces/Product'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function List() {
 
@@ -22,7 +23,27 @@ function List() {
     getAllProduct();
   },[])
 
+  const handleDelete = async (id: string) => {
+    // console.log(id);
+    try {
+      if(!id)
+        return;
+      
+      if(window.confirm("Bạn có chắc chắn muốn xóa không?")){
+        await axios.delete(`http://localhost:3000/products/${id}`)
 
+        setProducts((prev)=>{
+          return prev.filter((item: IProduct)=>{
+            return item.id != id
+          })
+        })
+
+        alert("Xóa thành công")
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="bg-white shadow rounded-lg overflow-hidden">
@@ -56,7 +77,7 @@ function List() {
         <tbody className="divide-y divide-gray-200">
          {products && products.map((item: IProduct, index: number)=>{
           return (
-            <tr className="hover:bg-gray-50">
+            <tr key={item.id} className="hover:bg-gray-50">
               <td className="px-4 py-3 text-xl text-gray-700">{index+1}</td>
               <td className="px-4 py-3 text-xl text-gray-700">{item.name}</td>
               <td className="px-4 py-3 text-xl text-gray-700">
@@ -66,10 +87,13 @@ function List() {
               <td className="px-4 py-3 text-xl text-gray-700">{item.quantity}</td>
               <td className="px-4 py-3">{item.category}</td>
               <td className="px-4 py-3 text-center space-x-2">
-                <button className="px-3 py-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-600">
+                <Link to={`/admin/product/detail/${item.id}`} className="px-3 py-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-600">
+                  Chi tiết
+                </Link>
+                <button className="px-3 py-1 text-xl text-white bg-yellow-500 rounded hover:bg-blue-600">
                   Sửa
                 </button>
-                <button className="px-3 py-1 text-xl text-white bg-red-500 rounded hover:bg-red-600">
+                <button onClick={()=>{ handleDelete(item.id) }} className="px-3 py-1 text-xl text-white bg-red-500 rounded hover:bg-red-600">
                   Xóa
                 </button>
               </td>
