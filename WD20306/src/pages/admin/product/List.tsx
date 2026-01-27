@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import type { IProduct } from '../../../interfaces/Product'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function List() {
 
@@ -21,6 +22,25 @@ function List() {
 
     getAllProduct();
   },[])
+
+  const handleDelete = async (id: string) => {
+    try {
+      if(!id)
+        return;
+
+      if(window.confirm("Bạn có chắc chắn muốn xóa không?")){
+        await axios.delete(`http://localhost:3000/products/${id}`)
+
+        setProducts((prev)=>{
+          return prev.filter((item:IProduct) => item.id != id)
+        })
+
+        alert("Xóa thành công")
+      }      
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="max-w-10xl mx-auto bg-white rounded-lg shadow">
@@ -57,13 +77,13 @@ function List() {
                   <td className="px-4 py-3 text-center">{item.rate}</td>
                   <td className="px-4 py-3 text-center">{item.description}</td>
                   <td className="px-4 py-3 text-center space-x-2 min-w-70">
-                    <button className="px-3 py-1 text-xl bg-blue-500 text-white rounded hover:bg-blue-600">
+                    <Link to={`/admin/product/${item.id}`} className="px-3 py-1 text-xl bg-blue-500 text-white rounded hover:bg-blue-600">
                       Chi tiết
-                    </button>
+                    </Link>
                     <button className="px-3 py-1 text-xl bg-yellow-500 text-white rounded hover:bg-blue-600">
                       Sửa
                     </button>
-                    <button className="px-3 py-1 text-xl bg-red-500 text-white rounded hover:bg-red-600">
+                    <button onClick={()=>{handleDelete(item.id)}} className="px-3 py-1 text-xl bg-red-500 text-white rounded hover:bg-red-600">
                       Xóa
                     </button>
                   </td>
