@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 function AdminLayout() {
   return (
@@ -11,7 +11,7 @@ function AdminLayout() {
         </div>
         <nav className="mt-5">
           <a href="#" className="block px-4 py-2 hover:bg-blue-50">Dashboard</a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-50">Sản phẩm</a>
+          <Link to="/admin/product" className="block px-4 py-2 hover:bg-blue-50">Sản phẩm</Link>
           <a href="#" className="block px-4 py-2 hover:bg-blue-50">Đơn hàng</a>
           <a href="#" className="block px-4 py-2 hover:bg-blue-50">Người dùng</a>
           <a href="#" className="block px-4 py-2 hover:bg-blue-50">Cài đặt</a>
