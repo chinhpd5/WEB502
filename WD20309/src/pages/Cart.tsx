@@ -42,7 +42,7 @@ function Cart() {
     <div>
       <h1 className='text-4xl text-center my-10'>Danh sách sản phẩm trong giỏ hàng</h1>
 
-      <table className="min-w-full text-2xl text-left">
+      <table className="min-w-full text-2xl text-left border">
         <thead className="bg-gray-50 text-gray-600 uppercase text-2xl">
           <tr>
             <th className="px-6 py-3">STT</th>
