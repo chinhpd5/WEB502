@@ -3,8 +3,10 @@ import Home from "./pages/Home"
 import Product from "./pages/Product"
 import ClientLayout from './layouts/ClientLayout'
 import AdminLayout from "./layouts/AdminLayout"
-import ProductDetail from "./pages/ProductDetail"
+import ProductDetailClient from "./pages/ProductDetail"
 import Cart from "./pages/Cart"
+import ProductList from "./pages/admin/product/List"
+import ProductDetail from "./pages/admin/product/Detail"
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
           <Route path="" element={<Home/>}/>
           <Route path="product" element={<Product/>}/>
           <Route path="cart" element={<Cart/>}/>
-          <Route path="product/:id" element={<ProductDetail/>}/>
+          <Route path="product/:id" element={<ProductDetailClient/>}/>
           <Route path="news" element={<h1>Trang tin tức</h1>}/>
           <Route path="contact" element={<h1>Trang liên hệ</h1>}/>
           <Route path="account" element={<h1>Trang tài khoản</h1>}/>
@@ -22,6 +24,8 @@ function App() {
 
         <Route path="/admin" element={<AdminLayout/>}>
           {/* Route dành quản trị viên */}
+          <Route path="product" element={<ProductList/>}/>
+          <Route path="product/:id" element={<ProductDetail/>}/>
         </Route>
 
         <Route path="*" element={<h1>Not Found</h1>}/>

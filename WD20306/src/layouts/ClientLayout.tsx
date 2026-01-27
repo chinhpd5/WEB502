@@ -30,6 +30,9 @@ function ClientLayout() {
                 <li>
                   <Link to="/account" className="hover:text-blue-600 transition">Tài khoản</Link>
                 </li>
+                 <li>
+                    <Link to="/admin" className="hover:text-blue-600 transition">Admin</Link>
+                </li>
               </ul>
             </div>
           </div>
