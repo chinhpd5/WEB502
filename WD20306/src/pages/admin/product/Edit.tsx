@@ -1,38 +1,64 @@
-import { useForm } from 'react-hook-form'
-import type { ProductAdd } from '../../../interfaces/Product'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { useForm } from 'react-hook-form';
+import type { ProductAdd } from '../../../interfaces/Product';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 import toast from 'react-hot-toast';
 
-function Add() {
-
+function Edit() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    reset
   } = useForm<ProductAdd>();
   const nav = useNavigate();
+  const {id} = useParams();
+  // console.log(id);
+
+  useEffect(()=>{
+    if(!id){
+      return;
+    }
+
+    const getProductById =async () => {
+      try {
+        const {data} = await axios.get(`http://localhost:3000/products/${id}`)
+        // console.log(data);
+        if(data)
+          reset(data) // đổ dữ liệu vào form
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getProductById();
+  },[id])
+
 
   const onSubmit = async (value: ProductAdd) => {
-    // console.log(value);
-
     try {
-      const res = await axios.post(`http://localhost:3000/products`, value)
-      // console.log(res);
-      if (res.status == 201) {
-        // alert("Thêm thành công");
-        toast.success("Thêm thành công")
-        nav("/admin/product")
+      if(!id)
+        return;
+
+      const res = await axios.put(`http://localhost:3000/products/${id}`,value)
+      console.log(res);
+      if(res.status == 200){
+        toast.success("Cập nhật thành công")
+        nav('/admin/product')
       }
+      
     } catch (error) {
       console.log(error);
     }
   }
+    
 
   return (
     <div className="max-w-3xl mx-auto mt-2 bg-white p-8 rounded-xl shadow">
       <h2 className="text-2xl font-semibold mb-6 text-gray-700">
-        ➕ Thêm mới sản phẩm
+        Cập nhật sản phẩm
       </h2>
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         {/* Tên sản phẩm */}
@@ -130,8 +156,7 @@ function Add() {
         </div>
       </form>
     </div>
-
   )
 }
 
-export default Add
+export default Edit

@@ -9,6 +9,7 @@ import ProductList from "./pages/admin/product/List"
 import ProductDetail from "./pages/admin/product/Detail"
 import ProductAdd from "./pages/admin/product/Add"
 import {Toaster} from "react-hot-toast"
+import ProductEdit from "./pages/admin/product/Edit"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           {/* Route dành quản trị viên */}
           <Route path="product" element={<ProductList/>}/>
           <Route path="product/add" element={<ProductAdd/>}/>
+          <Route path="product/edit/:id" element={<ProductEdit/>}/>
           <Route path="product/:id" element={<ProductDetail/>}/>
         </Route>
 
