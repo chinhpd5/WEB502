@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import type { IProduct } from '../../../interfaces/Product'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 function List() {
 
@@ -35,17 +36,22 @@ function List() {
           return prev.filter((item:IProduct) => item.id != id)
         })
 
-        alert("Xóa thành công")
+        // alert("Xóa thành công")
+        toast.success("Xóa thành công")
       }      
     } catch (error) {
       console.log(error);
+      toast.error("Xóa thất bại: " + error)
     }
   }
 
   return (
     <div className="max-w-10xl mx-auto bg-white rounded-lg shadow">
-      <div className="p-4 border-b">
+      <div className="p-4 border-b flex justify-between">
         <h2 className="text-2xl font-semibold">Danh sách sản phẩm</h2>
+        <Link to={`/admin/product/add`} className="px-3 py-1 text-xl bg-green-500 text-white rounded hover:bg-green-600">
+          Thêm mới
+        </Link>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse">
@@ -80,7 +86,7 @@ function List() {
                     <Link to={`/admin/product/${item.id}`} className="px-3 py-1 text-xl bg-blue-500 text-white rounded hover:bg-blue-600">
                       Chi tiết
                     </Link>
-                    <button className="px-3 py-1 text-xl bg-yellow-500 text-white rounded hover:bg-blue-600">
+                    <button className="px-3 py-1 text-xl bg-yellow-500 text-white rounded hover:bg-yellow-600">
                       Sửa
                     </button>
                     <button onClick={()=>{handleDelete(item.id)}} className="px-3 py-1 text-xl bg-red-500 text-white rounded hover:bg-red-600">

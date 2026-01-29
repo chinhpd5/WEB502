@@ -11,16 +11,6 @@
       "description": "High-performance laptop suitable for gaming and work."
     },
     {
-      "id": "4",
-      "name": "Running Shoes",
-      "price": 69.99,
-      "quantity": 200,
-      "rate": 4.3,
-      "image": "https://images.unsplash.com/photo-1600180758890-6e1e96f9f519",
-      "category": "Fashion",
-      "description": "Lightweight and durable shoes for running."
-    },
-    {
       "id": "5",
       "name": "Smartphone 12 Pro",
       "price": 999,
@@ -179,6 +169,33 @@
       "image": "https://images.unsplash.com/photo-1580894908360-74c3b0677a84",
       "category": "Computers",
       "description": "Ergonomic wireless mouse with Bluetooth."
+    },
+    {
+      "id": "54fb",
+      "name": "admin",
+      "price": 123,
+      "quantity": 1,
+      "category": "Fashion",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "description": ""
+    },
+    {
+      "id": "b7ac",
+      "name": "chinhpd5 new",
+      "price": 123,
+      "quantity": 1,
+      "category": "Gaming Laptop",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "description": "mô tả"
+    },
+    {
+      "id": "5dc7",
+      "name": "a123323",
+      "price": 1200,
+      "quantity": 10,
+      "category": "Fashion",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "description": ""
     }
   ]
 }

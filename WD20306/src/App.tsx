@@ -7,6 +7,8 @@ import ProductDetailClient from "./pages/ProductDetail"
 import Cart from "./pages/Cart"
 import ProductList from "./pages/admin/product/List"
 import ProductDetail from "./pages/admin/product/Detail"
+import ProductAdd from "./pages/admin/product/Add"
+import {Toaster} from "react-hot-toast"
 
 function App() {
   return (
@@ -25,11 +27,13 @@ function App() {
         <Route path="/admin" element={<AdminLayout/>}>
           {/* Route dành quản trị viên */}
           <Route path="product" element={<ProductList/>}/>
+          <Route path="product/add" element={<ProductAdd/>}/>
           <Route path="product/:id" element={<ProductDetail/>}/>
         </Route>
 
         <Route path="*" element={<h1>Not Found</h1>}/>
       </Routes>
+      <Toaster/>
     </>
   )
 }
