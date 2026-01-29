@@ -98,9 +98,9 @@ function List() {
                 <Link to={`/admin/product/detail/${item.id}`} className="px-3 py-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-600">
                   Chi tiết
                 </Link>
-                <button className="px-3 py-1 text-xl text-white bg-yellow-500 rounded hover:bg-blue-600">
+                <Link to={`/admin/product/edit/${item.id}`} className="px-3 py-1 text-xl text-white bg-yellow-500 rounded hover:bg-yellow-600">
                   Sửa
-                </button>
+                </Link>
                 <button onClick={()=>{ handleDelete(item.id) }} className="px-3 py-1 text-xl text-white bg-red-500 rounded hover:bg-red-600">
                   Xóa
                 </button>

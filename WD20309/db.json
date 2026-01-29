@@ -32,12 +32,12 @@
     },
     {
       "id": "6",
-      "name": "Leather Backpack",
-      "price": 120,
-      "quantity": 80,
+      "name": "Leather Backpack update 1",
+      "price": 12012,
+      "quantity": 8012,
       "rate": 4.6,
       "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6",
-      "category": "Bags",
+      "category": "Fashion",
       "description": "Stylish and durable leather backpack for travel and work."
     },
     {
