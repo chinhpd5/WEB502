@@ -179,6 +179,33 @@
       "image": "https://images.unsplash.com/photo-1580894908360-74c3b0677a84",
       "category": "Computers",
       "description": "Ergonomic wireless mouse with Bluetooth."
+    },
+    {
+      "id": "335c",
+      "name": "sản phẩm 1",
+      "price": 123,
+      "quantity": 10,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "category": "Computers",
+      "description": "abc"
+    },
+    {
+      "id": "3c0e",
+      "name": "Sản phẩm 2",
+      "price": 100,
+      "quantity": 10,
+      "image": "https://cdn.hoanghamobile.com/Uploads/2024/09/10/iphone-16-pro-sa-mac-1.png;trim.threshold=80;trim.percentpadding=0.5;width=180;height=180;mode=pad;paddingWidth=5;",
+      "category": "Electronics",
+      "description": "abc"
+    },
+    {
+      "id": "e1e6",
+      "name": "chinhpd5 new",
+      "price": 123,
+      "quantity": 1,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "category": "Fashion",
+      "description": ""
     }
   ]
 }

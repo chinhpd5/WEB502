@@ -9,3 +9,4 @@ export interface IProduct {
   description: string
 }
 
+export type ProductAdd = Omit<IProduct, "id" | "rate">

@@ -47,7 +47,15 @@ function List() {
 
   return (
     <div className="bg-white shadow rounded-lg overflow-hidden">
-      <h1 className='text-xl font-bold my-3'>Danh sách sản phẩm</h1>
+      <div className='flex justify-between'>
+        <h1 className='text-xl font-bold my-3'>Danh sách sản phẩm</h1>
+        <div className='pt-3'>
+          <Link to={`/admin/product/add`} className="px-3 py-1 text-xl text-white bg-green-500 rounded hover:bg-green-600">
+            Thêm mới
+          </Link>
+        </div>
+      </div>
+
       <table className="min-w-full border border-gray-200">
         <thead className="bg-gray-50">
           <tr>
