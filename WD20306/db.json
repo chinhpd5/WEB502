@@ -198,5 +198,30 @@
       "description": ""
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "$2a$10$/hQo/jqNpiDThYA77.U8jeN0Zz6XI56HPfF4RwQIfHrLRsAr5wStO",
+      "name": "chinhpd5",
+      "id": 1
+    },
+    {
+      "email": "chinhpd51@fpt.edu.vn",
+      "password": "$2a$10$FiYTzLP0jHhYUW8CYj7kn.LxSOGmbhXq/mgejngRSg6vbghoQysnm",
+      "name": "chinhpd5",
+      "id": 2
+    },
+    {
+      "email": "chinhpd52@fpt.edu.vn",
+      "password": "$2a$10$D9bRQ2dTqO5FIhl05Tv5vetd44qvxYg/4b1xSJC0pakxQwBQo8TrW",
+      "name": "chinhpd5",
+      "id": 3
+    },
+    {
+      "email": "chinhpd53@fpt.edu.vn",
+      "password": "$2a$10$X.hCTl10zxTRTnap8QmlvutjpdBVyq/mSDi7B10DJ.xofIsof1.Ji",
+      "name": "chinhpd5",
+      "id": 4
+    }
+  ]
 }
