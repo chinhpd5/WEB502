@@ -10,6 +10,8 @@ import ProductDetail from "./pages/admin/product/Detail"
 import ProductAdd from "./pages/admin/product/Add"
 import ProductEdit from "./pages/admin/product/Edit"
 import { Toaster } from "react-hot-toast"
+import Register from "./pages/Register"
+import Login from "./pages/Login"
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="about" element={<h1>Trang About</h1>}/>
           <Route path="contact" element={<h1>Trang Liên hệ</h1>}/>
           <Route path="news" element={<h1>Trang tin tức</h1>}/>
+          <Route path="register" element={<Register/>} />
+          <Route path="login" element={<Login/>} />
         </Route>
 
         <Route path="/admin" element={<AdminLayout/>}>
