@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import type { ResgiterInput } from '../interfaces/User'
 import toast from 'react-hot-toast';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Register() {
 
@@ -96,7 +96,7 @@ function Register() {
         </form>
         <p className="text-center text-sm text-gray-600 mt-4">
           Đã có tài khoản?
-          <a href="#" className="text-blue-600 hover:underline">Đăng nhập</a>
+          <Link to="/login" className="text-blue-600 hover:underline">Đăng nhập</Link>
         </p>
       </div>
     </div>
