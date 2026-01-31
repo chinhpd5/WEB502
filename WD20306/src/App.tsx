@@ -16,7 +16,12 @@ import Login from "./pages/Login"
 function ProtectedRoute(){
   const token = localStorage.getItem('token');
 
-  return token ? <Outlet/> : <Navigate to={'/login'}  />
+  if(!token){
+    toast.error("Vui lòng đăng nhập để sử dụng chức năng")
+    return <Navigate to={'/login'}/>
+  }
+
+  return <Outlet/>
 }
 
 function App() {
