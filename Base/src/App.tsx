@@ -4,7 +4,6 @@ function App() {
   
   return(
     <>
-      <h1 className="text-center">abc</h1>
       <Toaster/>
     </>
   )
